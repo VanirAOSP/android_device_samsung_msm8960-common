@@ -17,6 +17,8 @@ if [ $? -eq 0 ];then
   dd if=/dev/block/platform/msm_sdcc.1/by-name/aboot of=$C/aboot.img
   /system/bin/loki_patch boot $C/aboot.img /tmp/boot.img $C/boot.lok || exit 1
   /system/bin/loki_flash boot $C/boot.lok || exit 1
+  echo '[*] LOKI in the hiznouse... scrambling your giblets.'
+  echo '[*] Flashing modified boot.img to device.'
   rm -rf $C
   exit 0
 fi
