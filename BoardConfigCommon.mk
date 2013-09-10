@@ -94,7 +94,7 @@ TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
 
 # Kernel time optimization
 # temp remove - causing issues with short/long presses
-KERNEL_HAS_GETTIMEOFDAY_HELPER := true
+#KERNEL_HAS_GETTIMEOFDAY_HELPER := true
 
 # We have the new GPS driver
 BOARD_HAVE_NEW_QC_GPS := true
