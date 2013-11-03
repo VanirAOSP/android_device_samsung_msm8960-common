@@ -100,5 +100,7 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 # Common overlay
 DEVICE_PACKAGE_OVERLAYS += device/samsung/msm8960-common/overlay
 
+$(call inherit-product, hardware/qcom/msm8960/msm8960.mk)
+
 # common msm8960
 $(call inherit-product, device/samsung/qcom-common/qcom-common.mk)
