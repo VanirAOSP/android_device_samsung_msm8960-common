@@ -33,9 +33,6 @@ endif
 TARGET_ARCH_VARIANT_FPU := neon-vfpv4
 TARGET_CPU_VARIANT := krait
 
-# Adreno configuration
-BOARD_EGL_CFG := device/samsung/msm8960-common/configs/egl.cfg
-
 # Wifi related defines
 WIFI_BAND := 802_11_ABG
 WPA_SUPPLICANT_VERSION := VER_0_8_X
