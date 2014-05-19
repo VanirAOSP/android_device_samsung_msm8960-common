@@ -48,7 +48,7 @@ PRODUCT_PACKAGES += \
 
 # Camera Wrapper
 PRODUCT_PACKAGES += \
-    camera.msm8960
+    camera.MSM8960
 
 # HAL
 PRODUCT_PACKAGES += \
