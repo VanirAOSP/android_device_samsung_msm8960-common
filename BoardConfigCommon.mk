@@ -22,7 +22,6 @@ TARGET_BOARD_PLATFORM := msm8960
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
 
 # Architecture
-TARGET_ARCH_VARIANT_FPU := neon-vfpv4
 TARGET_CPU_VARIANT := krait
 
 # Kernel
