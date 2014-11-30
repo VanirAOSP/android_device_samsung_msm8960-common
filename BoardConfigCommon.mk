@@ -24,7 +24,7 @@ TARGET_ARCH_VARIANT_FPU := neon-vfpv4
 TARGET_CPU_VARIANT := krait
 
 # Kernel
-BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 zcache androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 zcache
 BOARD_KERNEL_BASE := 0x80200000
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01500000
 BOARD_KERNEL_PAGESIZE := 2048
@@ -100,6 +100,40 @@ BOARD_HAS_NO_MISC_PARTITION := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_RECOVERY_SWIPE := true
 TARGET_RECOVERY_FSTAB := device/samsung/msm8960-common/rootdir/etc/fstab.qcom
+
+# SELinux
+include device/qcom/sepolicy/sepolicy.mk
+BOARD_SEPOLICY_DIRS += device/samsung/msm8960-common/sepolicy
+
+BOARD_SEPOLICY_UNION += \
+    bluetooth.te \
+    bootanim.te \
+    device.te \
+    file.te \
+    file_contexts \
+    genfs_contexts \
+    init_shell.te \
+    kernel.te \
+    keypad_dev.te \
+    macloader.te \
+    mediaserver.te \
+    mm-qcamerad.te \
+    mpdecision.te \
+    netmgrd.te \
+    orientationd.te \
+    platform_app.te \
+    qmuxd.te \
+    rild.te \
+    rmt_storage.te \
+    surfaceflinger.te \
+    sysinit.te \
+    system_app.te \
+    system_server.te \
+    thermal-engine.te \
+    thermald.te \
+    ueventd.te \
+    vold.te \
+    wpa.te
 
 # Vold
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
