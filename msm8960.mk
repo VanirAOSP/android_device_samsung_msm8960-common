@@ -194,17 +194,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermald-8960.conf:system/etc/thermald-8960.conf
 
-# Torch
-PRODUCT_PACKAGES += \
-    Torch
-
-# Props
-PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.dexopt-data-only=0
-
-# Common overlay
-DEVICE_PACKAGE_OVERLAYS += device/samsung/msm8960-common/overlay
-
 # USB
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
